@@ -1,6 +1,11 @@
 package com.company;
 
 public class CabineControle {
+    double tarifaBase;
+
+    public CabineControle(double tarifaBase){
+        this.tarifaBase = tarifaBase;
+    }
 
     public void efetuaEntrada(){ // valida e efetua a entrada de veiculos no estacionamento
     }
