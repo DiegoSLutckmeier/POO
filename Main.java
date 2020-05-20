@@ -27,7 +27,7 @@ public class Main {
                     continue;
                 case 2:
                     continue;
-                case 3:
+                case 3: // extende opcao de selecionar o tipo de veiculo
                     continue;
                 case 4:
                     continue;
