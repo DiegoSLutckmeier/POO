@@ -1,9 +1,9 @@
 package com.company;
 
 public class Veiculo {
-    String placa;
-    String modelo;
-    String fabricante;
+    protected String placa;
+    protected String modelo;
+    protected String fabricante;
 
     public void setModelo(String modelo){
         this.modelo = modelo;
