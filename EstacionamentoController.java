@@ -2,13 +2,15 @@ package com.company;
 
 public class EstacionamentoController {
     Object veiculo;
+    CabineControle cabine;
+    Estacionamento estacionamento;
 
     public void criaCabine(double tarifaBase){
-        CabineControle cabine = new CabineControle(tarifaBase);
+        this.cabine = new CabineControle(tarifaBase);
     }
 
     public void criaEstacionamento(int qtdPreferencial, int qtdCarro, int qtdMoto, int qtdCamionete){
-        Estacionamento estacionamento = new Estacionamento( qtdPreferencial, qtdCarro, qtdMoto, qtdPreferencial);
+        this.estacionamento = new Estacionamento( qtdPreferencial, qtdCarro, qtdMoto, qtdPreferencial);
     }
 
     public void criaMoto( String placa) {
@@ -22,5 +24,5 @@ public class EstacionamentoController {
     public void criaCamionete( String placa) {
         this.veiculo = new Camionete(placa);
     }
-    
+
 }
