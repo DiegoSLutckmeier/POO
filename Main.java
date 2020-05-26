@@ -30,8 +30,7 @@ public class Main {
                     System.out.println(estController.cabine.tarifaBase); // teste
                     continue;
                 case 2:
-                    estController.criaEstacionamento(10,10,10,10);
-                    System.out.println(estController.estacionamento.qtdCarro); //teste
+                    estController.cabine.criaEstacionamento(10,10,10,10);
                     continue;
                 case 3: // extende a opcao de selecionar o tipo de veiculo
                     System.out.println("Escolha um tipo de veiculo: \n");
@@ -61,6 +60,9 @@ public class Main {
                 case 4:
                     continue;
                 case 5:
+                    continue;
+                case 9:
+                    estController.cabine.efetuaEntrada();
                     continue;
                 case 0:
                     retorno = true;
