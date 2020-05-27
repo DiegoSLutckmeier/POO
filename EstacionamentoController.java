@@ -1,16 +1,11 @@
 package com.company;
 
 public class EstacionamentoController {
-    Object veiculo;
+    Veiculo veiculo;
     CabineControle cabine;
-    Estacionamento estacionamento;
 
     public void criaCabine(double tarifaBase){
         this.cabine = new CabineControle(tarifaBase);
-    }
-
-    public void criaEstacionamento(int qtdPreferencial, int qtdCarro, int qtdMoto, int qtdCamionete){
-        this.estacionamento = new Estacionamento( qtdPreferencial, qtdCarro, qtdMoto, qtdPreferencial);
     }
 
     public void criaMoto( String placa) {
