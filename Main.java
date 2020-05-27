@@ -21,46 +21,52 @@ public class Main {
             System.out.println("3 - Entrada de veículo.");
             System.out.println("4 - Saída de veículo.");
             System.out.println("5 - Listar todas os veiculos que ocupam o estacionamento.");
-            System.out.println("0 - Exit.");
+            System.out.println("0 - Exit. \n");
             opcaoEscolhida = scanner.nextInt();
 
             switch (opcaoEscolhida) {
                 case 1:
                     estController.criaCabine(10);
-                    System.out.println(estController.cabine.tarifaBase); // teste
+                    System.out.println("Tarifa base: "+estController.cabine.tarifaBase+"\n"); // teste
                     continue;
                 case 2:
-                    estController.criaEstacionamento(10,10,10,10);
-                    System.out.println(estController.estacionamento.qtdCarro); //teste
+                    estController.cabine.criaEstacionamento(5,5,5,5);
                     continue;
                 case 3: // extende a opcao de selecionar o tipo de veiculo
-                    System.out.println("Escolha um tipo de veiculo: \n");
-                    System.out.println("1 - Carro.");
-                    System.out.println("2 - Moto.");
-                    System.out.println("3 - Camionete.");
-                    System.out.println("0 - Voltar.");
-                    opcaoTipoVeiculo = scanner.nextInt();
+                    boolean retornoInsercao = false;
 
-                    switch(opcaoTipoVeiculo) {
-                        case 1:
-                            estController.criaCarro("AGS5F26");
-                            System.out.println(estController.veiculo);
-                            continue;
-                        case 2:
-                            estController.criaMoto("ALS4O78");
-                            System.out.println(estController.veiculo);
-                            continue;
-                        case 3:
-                            estController.criaCamionete("ALD8W15");
-                            System.out.println(estController.veiculo);
-                            continue;
-                        case 0:
-                            continue;
-                    };
+                    while (!retornoInsercao) {
+                        System.out.println("Escolha um tipo de veiculo: \n");
+                        System.out.println("1 - Carro.");
+                        System.out.println("2 - Moto.");
+                        System.out.println("3 - Camionete.");
+                        System.out.println("0 - Voltar. \n");
+                        opcaoTipoVeiculo = scanner.nextInt();
+
+                        switch (opcaoTipoVeiculo) {
+                            case 1:
+                                estController.criaCarro("AGS5F26");
+                                estController.cabine.efetuaEntrada(estController.veiculo);
+                                continue;
+                            case 2:
+                                estController.criaMoto("ALS4O78");
+                                estController.cabine.efetuaEntrada(estController.veiculo);
+                                continue;
+                            case 3:
+                                estController.criaCamionete("ALD8W15");
+                                estController.cabine.efetuaEntrada(estController.veiculo);
+                                continue;
+                            case 0:
+                                retornoInsercao = true;
+                        }
+                    }
+
                     continue;
                 case 4:
                     continue;
                 case 5:
+                    continue;
+                case 9:
                     continue;
                 case 0:
                     retorno = true;
