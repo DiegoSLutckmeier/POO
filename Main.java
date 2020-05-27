@@ -26,11 +26,22 @@ public class Main {
 
             switch (opcaoEscolhida) {
                 case 1:
-                    estController.criaCabine(10);
+                    System.out.println("Passe a tarifa base: ");
+                    double tarifaBase = scanner.nextDouble();
+                    estController.criaCabine(tarifaBase);
                     System.out.println("Tarifa base: "+estController.cabine.tarifaBase+"\n"); // teste
                     continue;
                 case 2:
-                    estController.cabine.criaEstacionamento(5,5,5,5);
+                    System.out.println("Passe as quantidades referentes na sequência abaixo: ");
+                    System.out.println("Quantidade de vagas preferenciais: ");
+                    int qtdPreferencial = scanner.nextInt();
+                    System.out.println("Quantidade de vagas de carros: ");
+                    int qtdCarro = scanner.nextInt();
+                    System.out.println("Quantidade de vagas de moto: ");
+                    int qtdMoto = scanner.nextInt();
+                    System.out.println("Quantidade de vagas de camionetes: ");
+                    int qtdCamionete = scanner.nextInt();
+                    estController.cabine.criaEstacionamento(qtdPreferencial,qtdCarro,qtdMoto,qtdCamionete);
                     continue;
                 case 3: // extende a opcao de selecionar o tipo de veiculo
                     boolean retornoInsercao = false;
