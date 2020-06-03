@@ -13,4 +13,12 @@ public class Veiculo {
     public void setFabricante(String fabricante){
         this.fabricante = fabricante;
     }
+
+    public void setPreferencial() {
+        this.preferencial = true;
+    }
+
+    public String getPlaca() {
+        return this.placa;
+    }
 }
