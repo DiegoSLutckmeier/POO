@@ -1,0 +1,31 @@
+package com.company;
+
+import java.util.Date;
+
+public class Ticket {
+    Date tempoEntrada;
+    Date tempoSaida;
+    private String ticketID;
+
+    public Ticket( String placaCarro) {
+        this.tempoEntrada = new Date();
+        this.ticketID = tempoEntrada.toString().replaceAll("\\s+","")+placaCarro;
+    }
+
+    public Date getTempoEntrada() {
+        return this.tempoEntrada;
+    }
+
+    public Date getTempoSaida() {
+        return this.tempoSaida;
+    }
+
+    public String getTicketID() {
+        return ticketID;
+    }
+
+    public void setTempoSaida() {
+        this.tempoSaida = new Date();
+    }
+
+}
